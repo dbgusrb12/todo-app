@@ -3,7 +3,7 @@
     <ul>
       <li v-for="todoItem in todoItems" v-bind:key="todoItem" class="shadow">
         {{ todoItem }}
-        <span class="removeBtn">
+        <span class="removeBtn" v-on:click="removeTodo">
           <i class="fas fa-trash-alt"></i>
         </span>
       </li>
@@ -16,6 +16,11 @@ export default {
   data: function() {
     return {
       todoItems: []
+    }
+  },
+  methods: {
+    removeTode: function() {
+      
     }
   },
   created: function() {
